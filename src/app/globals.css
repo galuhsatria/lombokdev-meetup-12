@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,17 +19,28 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0E1217;
+  font-family: 'Poppins';
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-accent {
+    @apply bg-gradient-to-r from-[#EE0979]  to-[#FF6A00];
+  }
+
+  .text-accent {
+    @apply bg-gradient-to-r from-[#EE0979] to-[#FF6A00] bg-clip-text text-transparent;
+  }
+
+  .bg-secondary {
+    @apply bg-[#0E1217];
+  }
+
+  .bg-tertiary {
+    @apply bg-[#1A1E26];
   }
 }
