@@ -1,3 +1,5 @@
+import Pembicara from '@/components/pembicara';
+import Sesi from '@/components/sesi';
 import Image from 'next/image';
 import { IoIosArrowForward } from 'react-icons/io';
 

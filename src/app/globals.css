@@ -19,8 +19,8 @@
 }
 
 body {
-  background-color: #0E1217;
-  font-family: 'Poppins';
+  background-color: #0e1217;
+  font-family: "Poppins";
 }
 
 @layer utilities {
@@ -42,5 +42,14 @@ body {
 
   .bg-tertiary {
     @apply bg-[#1A1E26];
+  }
+  .text-icon {
+    @apply text-[#818181];
+  }
+  .border-gradient {
+    background: linear-gradient(#1a1e26 0 0) padding-box,
+      linear-gradient(to top, #1b1b1b, #818181) border-box;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
   }
 }
