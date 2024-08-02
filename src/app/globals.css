@@ -79,4 +79,8 @@
   .bg-accent {
     @apply bg-gradient-to-r from-[#EE0979] to-[#FF6A00];
   }
+
+  .paused {
+    animation-play-state: paused;
+  }
 }
