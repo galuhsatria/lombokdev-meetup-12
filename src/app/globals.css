@@ -70,17 +70,26 @@
   }
 }
 
-
 @layer utilities {
   .text-accent {
     @apply bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-transparent bg-clip-text;
+    line-height: 1.2; 
+    padding-bottom: 0.5rem;
   }
 
   .bg-accent {
     @apply bg-gradient-to-r from-[#EE0979] to-[#FF6A00];
   }
-
-  .paused {
-    animation-play-state: paused;
+  .text-icon {
+    @apply text-[#818181];
+  }
+  .border-gradient {
+    background: linear-gradient(#1a1e26 0 0) padding-box,
+      linear-gradient(to top, #1b1b1b, #818181) border-box;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+  }
+  .bg-tertiary {
+    @apply bg-[#1A1E26];
   }
 }

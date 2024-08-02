@@ -1,3 +1,5 @@
+import Pembicara from '@/components/pembicara';
+import Sesi from '@/components/sesi';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -52,6 +54,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Sesi />
+      <Pembicara />
     </main>
   );
 }
