@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { IoMenu } from 'react-icons/io5';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +31,7 @@ export default function Navbar() {
             src={'/images/logo.png'}
             alt="Logo Lombok Dev Meetup"
             width={70}
-            height={100}
+            height={48}
             className="
           max-md:w-14"
           />
@@ -39,31 +39,13 @@ export default function Navbar() {
 
         <div className={`menu transition-all duration-200 max-md:hidden`}>
           <ul className="flex">
-            <li>
-              <Link href="#tentang" className="no-underline font-medium hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 text-white cursor-pointer">
-                Tentang
-              </Link>
-            </li>
-            <li>
-              <Link href="#sesi" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                Sesi
-              </Link>
-            </li>
-            <li>
-              <Link href="#pembicara" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                Pembicara
-              </Link>
-            </li>
-            <li>
-              <Link href="hadiah" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                Hadiah
-              </Link>
-            </li>
-            <li>
-              <Link href="#FAQ" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                FAQ
-              </Link>
-            </li>
+            {links.map((link, index) => (
+              <li key={index}>
+                <Link href={link.link} className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -72,36 +54,41 @@ export default function Navbar() {
             <IoMenu className="text-2xl text-white" />
           </SheetTrigger>
           <SheetContent className="bg-[#1A1E26] border-none">
-            <ul className="flex gap-6 flex-col mt-10">
-              <li>
-                <Link href="#tentang" className="no-underlin transition-all duration-200 text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 ">
-                  Tentang
-                </Link>
-              </li>
-              <li>
-                <Link href="#sesi" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                  Sesi
-                </Link>
-              </li>
-              <li>
-                <Link href="#pembicara" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                  Pembicara
-                </Link>
-              </li>
-              <li>
-                <Link href="#hadiah" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                  Hadiah
-                </Link>
-              </li>
-              <li>
-                <Link href="#faq" className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
+            <div className="flex gap-6 flex-col mt-10">
+              {links.map((link, index) => (
+                <SheetClose key={index} asChild>
+                  <Link href={link.link} className="no-underline text-white cursor-pointer hover:bg-black/20 rounded-md px-6 py-2 transition-all duration-200 ">
+                    {link.label}
+                  </Link>
+                </SheetClose>
+              ))}
+            </div>
           </SheetContent>
         </Sheet>
       </nav>
     </header>
   );
 }
+
+const links = [
+  {
+    label: 'Tentang',
+    link: '#tentang',
+  },
+  {
+    label: 'Sesi',
+    link: '#sesi',
+  },
+  {
+    label: 'Pembicara',
+    link: '#pembicara',
+  },
+  {
+    label: 'Hadiah',
+    link: '#hadiah',
+  },
+  {
+    label: 'FAQ',
+    link: '#faq',
+  },
+];
