@@ -65,6 +65,7 @@
   * {
     @apply border-border;
     scroll-behavior: smooth;
+    scroll-padding: 4rem;
   }
   body {
     @apply bg-[#0E1217];
