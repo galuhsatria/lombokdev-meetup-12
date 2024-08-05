@@ -1,9 +1,8 @@
 # Lombok Dev Meetup
 
-![Lombok Dev Meetup](https://github.com/galuhsatria/lombokdev-meetup-12/blob/30498c6f3dd91a580e583b3554d4ec3d0e20db95/public/images/Cover.png)
+![Lombok Dev Meetup](https://github.com/galuhsatria/lombokdev-meetup-12/blob/main/public/images/Cover.png)
 
-Website to display information about the Lombok Dev Meetup 2024 event.
----
+## Website to display information about the Lombok Dev Meetup 2024 event.
 
 ## What I'm use here?
 
@@ -12,6 +11,7 @@ Website to display information about the Lombok Dev Meetup 2024 event.
 - [Shadcn UI](https://ui.shadcn.com/) as UI Component
 
 ## How to run it locally?
+
 ```
 # Clone this repository
 git clone https://github.com/galuhsatria/lombokdev-meetup-12.git
@@ -26,4 +26,4 @@ npm install
 npm run dev
 ```
 
-* Open http://localhost:3000 with your browser to see the result
+- Open http://localhost:3000 with your browser to see the result
