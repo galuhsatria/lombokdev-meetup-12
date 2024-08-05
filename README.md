@@ -14,7 +14,7 @@ Website to display information about the Lombok Dev Meetup 2024 event.
 ## How to run it locally?
 ```
 # Clone this repository
-git clone https://github.com/galuhsatria/lombokdev-meetup-12
+git clone https://github.com/galuhsatria/lombokdev-meetup-12.git
 
 # Go to the repository folder
 cd lombokdev-meetup-12
