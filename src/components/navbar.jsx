@@ -5,13 +5,17 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { IoMenu } from 'react-icons/io5';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { links } from '@/content/content';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const navbar = document.querySelector('header');
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > navbarHeight) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -19,22 +23,19 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
-    <header className={`fixed w-full z-30 max-md:bg-black/50 max-md:backdrop-blur-md transition-all duration-150 ${isScrolled ? 'md:bg-black/50 md:backdrop-blur-md' : 'bg-transparent'}`}>
-      <nav className="p-4 max-md:py-3 max-w-6xl mx-auto flex items-center justify-between ">
+    <header className={`fixed w-full z-30 max-md:bg-black/50 max-md:backdrop-blur-md transition-colors duration-150 ${isScrolled ? 'md:bg-black/50 md:backdrop-blur-md' : 'bg-transparent'}`}>
+      <nav className="p-4 max-md:py-3 max-w-5xl mx-auto flex items-center justify-between ">
         <div className="logo">
-          <Image
-            src={'/images/logo.png'}
-            alt="Logo Lombok Dev Meetup"
-            width={70}
-            height={48}
-            className="
-          max-md:w-14"
-          />
+          <Image src={'/images/logo.png'} alt="Logo Lombok Dev Meetup" width={70} height={48} className="max-md:w-14" />
         </div>
 
         <div className={`menu transition-all duration-200 max-md:hidden`}>
@@ -70,25 +71,3 @@ export default function Navbar() {
   );
 }
 
-const links = [
-  {
-    label: 'Tentang',
-    link: '#tentang',
-  },
-  {
-    label: 'Sesi',
-    link: '#sesi',
-  },
-  {
-    label: 'Pembicara',
-    link: '#pembicara',
-  },
-  {
-    label: 'Hadiah',
-    link: '#hadiah',
-  },
-  {
-    label: 'FAQ',
-    link: '#faq',
-  },
-];

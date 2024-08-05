@@ -1,10 +1,15 @@
+'use client'
+
 import Image from "next/image";
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { LuLinkedin } from "react-icons/lu";
 
+
 export default function Pembicara() {
+
+
   return (
     <section className="min-h-screen">
       <div className="items-center flex flex-col md:items-start">
