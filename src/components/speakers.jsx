@@ -45,12 +45,12 @@ export default function Speakers() {
     >
       <CarouselContent >
         {speakers.map((speaker, index) => (
-          <CarouselItem key={index} className="md:basis-1/2">
-            <div className="bg-[#1A1E26] rounded-md w-full flex max-md:h-max border border-b-0 border-[#2c3241] items-center justify-center p-4 gap-4 max-md:flex-col max-md:py-4">
-              <div className="w-[60%]">
-                <img src="/images/person.png" alt="" className="rounded-md" />
+          <CarouselItem key={index} className="sm:basis-1/2">
+            <div className="bg-[#1A1E26] rounded-md w-full flex max-md:h-max border border-b-0 border-[#2c3241] items-center justify-center p-4 gap-4 max-md:flex-col max-md:py-4 max-sm:p-0">
+              <div className="sm:w-[60%] w-full max-sm:h-64">
+                <img src="/images/person.png" alt="" className="rounded-md max-sm:w-full max-sm:rounded-b-none max-sm:object-cover h-full" />
               </div>
-              <div className="flex-col w-full">
+              <div className="flex-col w-full max-sm:p-4">
                 <div className="text-white">
                   <p className="text-xl font-bold">{speaker.name}</p>
                   <p className="text-gray-400">{speaker.job}</p>

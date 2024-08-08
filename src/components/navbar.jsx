@@ -32,11 +32,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-30 max-md:bg-black/50 max-md:backdrop-blur-md transition-colors duration-150 ${isScrolled ? 'md:bg-black/50 md:backdrop-blur-md' : 'bg-transparent'}`}>
-      <nav className="p-4 max-md:py-3 max-w-5xl mx-auto flex items-center justify-between ">
-        <div className="logo">
-          <Image src={'/images/logo.png'} alt="Logo Lombok Dev Meetup" width={70} height={48} className="max-md:w-14" />
-        </div>
+    <header className={`fixed w-full z-30 max-md:bg-gray-950/80 max-md:backdrop-blur-md transition-colors duration-150 ${isScrolled ? 'md:bg-gray-950/80 md:backdrop-blur-md' : 'bg-transparent'}`}>
+      <nav className="py-4 px-6 max-md:py-3 max-w-6xl mx-auto flex items-center justify-between ">
+        <Link className="logo" href={'/'}>
+          <Image src={'/images/lombok-dev.png'} alt="Logo Lombok Dev Meetup" width={150} height={23} className="max-md:w-32 py-2" />
+        </Link>
 
         <div className={`menu transition-all duration-200 max-md:hidden`}>
           <ul className="flex">

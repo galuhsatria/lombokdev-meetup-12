@@ -3,20 +3,20 @@ import React from "react";
 
 export const faq = [
   {
-    question: 'Kapan acara Lombok Dev Meetup ke 12?',
-    answer: 'Akan diadakah pada 1 September 2024',
+    question: 'Bagaimana cara bergabung jadi anggota?',
+    answer: 'anda dapat bergabung ke telegram resi lombok dev melalui link berikut https://t.me/lombokdev',
   },
   {
-    question: 'Berapakah biaya pendaftaran?',
-    answer: 'Biaya pendaftaran GRATIS untuk 50 orang pertama',
+    question: 'Apa syarat menjadi anggota?',
+    answer: 'Cukup bergabung ke channel telegram kami',
   },
   {
-    question: 'Setiap berapa kali setahun diadakanya Lombok Dev Meetup?',
-    answer: 'Diadakan setiap satu tahun sekali',
+    question: 'Apakah ada biaya pendaftaran?',
+    answer: 'Tidak, untuk bergabung menjadi bagian dari LombokDev itu GRATIS',
   },
   {
-    question: 'Apakah event ini untuk umum?',
-    answer: 'Ya event ini terbuka untuk umum',
+    question: 'Dimana domisili tempat rutin berkumpul?',
+    answer: 'Untuk saat ini lombok dev masih berpusat di mataram untuk beberapa kegiatan',
   },
 ];
 
@@ -84,23 +84,19 @@ export const sessions = [
 
 export const links = [
   {
-    label: 'Tentang',
-    link: '#tentang',
+    label: 'Home',
+    link: '/',
   },
   {
-    label: 'Sesi',
-    link: '#sesi',
+    label: 'Event',
+    link: '/events',
   },
   {
-    label: 'Pembicara',
-    link: '#pembicara',
-  },
-  {
-    label: 'Hadiah',
-    link: '#hadiah',
+    label: 'Team',
+    link: '/teams',
   },
   {
     label: 'FAQ',
-    link: '#faq',
+    link: '/#faq',
   },
 ];

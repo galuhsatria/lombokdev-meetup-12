@@ -8,10 +8,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-[#1A1E26] text-white p-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center max-md:flex-col max-md:items-start">
           <div>
-            <img src="/images/logo.png" alt="Logo Lombok Dev" className="w-20" />
+            <img src="/images/lombok-dev.png" alt="Logo Lombok Dev" className="w-40" />
             <div>
               <ul className="flex gap-4 mt-3">
                 {links.map((link, index) => (

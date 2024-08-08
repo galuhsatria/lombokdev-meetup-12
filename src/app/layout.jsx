@@ -1,19 +1,14 @@
-import Footer from "@/components/footer";
-import "./globals.css";
-import Navbar from "@/components/navbar";
-
+import React from 'react';
+import './globals.css';
 export const metadata = {
-  title: "Lombok Dev Meetup 12",
-  description: "Informasi tentang lombok dev meetup yang ke 12",
+  title: 'Lombok Dev | Home',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Navbar/>
-      {children}
-      <Footer/>
+        {children}
       </body>
     </html>
   );
